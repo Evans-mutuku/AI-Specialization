@@ -5,7 +5,6 @@ import numpy as np
 # Load a pre-trained lightweight model (e.g., MobileNet)
 model = tf.keras.applications.MobileNetV2(weights='imagenet')
 
-# Simulate input data (e.g., image from a camera)
 image = np.random.rand(224, 224, 3)
 image = tf.keras.applications.mobilenet_v2.preprocess_input(image[np.newaxis, ...])
 
