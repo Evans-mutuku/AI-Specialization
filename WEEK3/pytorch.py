@@ -27,7 +27,6 @@ class SimpleNN(nn.Module):
         x = self.fc2(x)
         return x
 
-# Instantiate the model.
 model = SimpleNN()
 
 # Define the optimizer and the loss function.
