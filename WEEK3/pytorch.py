@@ -43,15 +43,15 @@ for epoch in range(5):
         if batch_idx % 100 == 0:
             print(f"Train Epoch: {epoch} [{batch_idx * len(data)}/{len(train_loader.dataset)}] Loss: {loss.item()}")
 
-    model.eval()   # Set the model to evaluation (inference) mode.
+    model.eval() 
     test_loss = 0
     correct = 0
-    with torch.no_grad():  # Disable gradient calculation for inference.
+    with torch.no_grad():
         for data, target in test_loader:
-            output = model(data)                # Compute output for test data.
-            test_loss += criterion(output, target).item()  # Sum up batch losses.
-            pred = output.argmax(dim=1, keepdim=True)  # Get the index of the max logit (predicted class).
-            correct += pred.eq(target.view_as(pred)).sum().item()  # Count correct predictions.
+            output = model(data)    
+            test_loss += criterion(output, target).item() 
+            pred = output.argmax(dim=1, keepdim=True) 
+            correct += pred.eq(target.view_as(pred)).sum().item() 
 
     test_loss /= len(test_loader.dataset)  # Compute average loss.
     accuracy = 100. * correct / len(test_loader.dataset)  # Calculate accuracy in percentage.
