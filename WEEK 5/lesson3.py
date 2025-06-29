@@ -8,11 +8,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 
-# Step 2: Download required resources and wait for them to complete
 nltk.download('punkt', quiet=True)
 nltk.download('stopwords', quiet=True)
 
-# Step 3: Sample DataFrame
 data = {
     'review': [
         "This product is amazing! I love it.",
