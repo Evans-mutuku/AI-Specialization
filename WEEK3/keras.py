@@ -4,15 +4,9 @@ import tensorflow as tf
 
 x_train, x_test = x_train / 255.0, x_test / 255.0
 
-# Build the neural network model using the Sequential API.
-# The model is a linear stack of layers.
 model = tf.keras.models.Sequential([
-    # Flatten layer:
-    # Converts each 28x28 image into a 1D array of 784 pixels.
     tf.keras.layers.Flatten(input_shape=(28, 28)),
     
-    # Dense (fully-connected) layer:
-    # Has 128 neurons and uses the ReLU activation function to add non-linearity.
     tf.keras.layers.Dense(128, activation='relu'),
     
     # Dropout layer:
