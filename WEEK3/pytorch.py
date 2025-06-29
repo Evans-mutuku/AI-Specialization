@@ -19,16 +19,11 @@ class SimpleNN(nn.Module):
     def __init__(self):
         super(SimpleNN, self).__init__()
         self.fc1 = nn.Linear(28 * 28, 128)
-        # Define the second fully connected layer:
-        # Input features from the previous layer and output should be 10 classes (digits 0-9).
         self.fc2 = nn.Linear(128, 10)
     
     def forward(self, x):
-        # Flatten the input x from shape [batch_size, 1, 28, 28] to [batch_size, 28*28]
         x = x.view(-1, 28 * 28)
-        # Apply the first layer then a ReLU activation function to introduce non-linearity.
         x = F.relu(self.fc1(x))
-        # Pass the output through the second layer which outputs the logits for 10 classes.
         x = self.fc2(x)
         return x
 
