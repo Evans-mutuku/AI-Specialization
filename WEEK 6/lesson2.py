@@ -17,7 +17,6 @@ class SmartThermostat:
         else:
             print("Temperature is optimal.")
 
-# Simulate user behavior (e.g., preferred temperatures over a week)
 user_behavior = [22, 23, 22, 21, 22, 23, 22]
 thermostat = SmartThermostat()
 thermostat.learn_preferences(user_behavior)
