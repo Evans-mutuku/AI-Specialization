@@ -1,7 +1,6 @@
 # Example: AI-assisted content generation
 from transformers import pipeline
 
-# Load a pre-trained text generation model
 generator = pipeline('text-generation', model='gpt2')
 
 # Generate content suggestions
