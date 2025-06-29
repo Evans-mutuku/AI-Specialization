@@ -1,4 +1,3 @@
-# Step 1: Install and import necessary libraries
 import nltk
 import pandas as pd
 from nltk.corpus import stopwords
