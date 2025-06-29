@@ -4,7 +4,6 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 tokenizer = AutoTokenizer.from_pretrained("Salesforce/codet5-small")
 model = AutoModelForSeq2SeqLM.from_pretrained("Salesforce/codet5-small")
 
-# 2. Example function to summarize
 code = """
 def calculate_tax(income, threshold=35000):
     \"""
