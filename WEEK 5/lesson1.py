@@ -1,6 +1,4 @@
-# Import necessary libraries
 import pandas as pd
-import nltk
 
 data = {
     'review': [
