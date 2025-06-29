@@ -12,19 +12,12 @@ transform = transforms.Compose([
 
 train_dataset = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
 test_dataset = datasets.MNIST(root='./data', train=False, download=True, transform=transform)
-
-# Wrap the datasets in DataLoader objects to enable batch processing and shuffling.
-# - batch_size: Number of samples per batch.
-# - shuffle=True for training data to randomize data order each epoch.
 train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=1000, shuffle=False)
 
-# Define a simple neural network model by subclassing nn.Module.
 class SimpleNN(nn.Module):
     def __init__(self):
         super(SimpleNN, self).__init__()
-        # Define the first fully connected (dense) layer:
-        # Input features are 28*28 pixels (flattened image) and output is 128 features.
         self.fc1 = nn.Linear(28 * 28, 128)
         # Define the second fully connected layer:
         # Input features from the previous layer and output should be 10 classes (digits 0-9).
