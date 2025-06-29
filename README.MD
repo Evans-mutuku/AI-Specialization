@@ -11,3 +11,5 @@ Technologies used
 5. GitHub Copilot
 6. Cursor AI
 7. VsCode
+
+### Happy Coding!
