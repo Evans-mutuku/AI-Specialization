@@ -1,6 +1,6 @@
 import openai
 
-openai_api_key = "gffgfg"
+openai_api_key = "gffgfg a"
 client = openai.OpenAI(api_key=openai_api_key)
 
 def generate_tests(code_snippet: str) -> str:
@@ -9,7 +9,7 @@ def generate_tests(code_snippet: str) -> str:
     """
     prompt = f"Write pytest tests for this code:\n\n{code_snippet}\n\n# tests\n"
     response = client.completions.create(
-        model="gpt-3.5-turbo-instruct",               # GPT-3 variant tuned for code
+        model="gpt-3.5-turbo-instruct",            
         prompt=prompt,
         max_tokens=200,
         temperature=0.2,
