@@ -2,7 +2,6 @@
 import pandas as pd
 import nltk
 
-# Sample data: Customer reviews
 data = {
     'review': [
         'I love this product!',
@@ -14,6 +13,5 @@ data = {
     'sentiment': ['positive', 'negative', 'positive', 'negative', 'positive']
 }
 
-# Create a DataFrame
 df = pd.DataFrame(data)
 print(df)
