@@ -22,7 +22,6 @@ data = {
 }
 df = pd.DataFrame(data)
 
-# Step 4: Preprocessing function
 def preprocess_text(text):
     try:
         text = text.lower()
@@ -35,9 +34,5 @@ def preprocess_text(text):
         return f"Error: {e}"
 
 
-
-# Step 5: Apply function safely
 df['cleaned_review'] = df['review'].apply(preprocess_text)
-
-# Step 6: View results
 print(df[['review', 'cleaned_review']])
