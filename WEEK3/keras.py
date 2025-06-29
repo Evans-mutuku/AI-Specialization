@@ -6,11 +6,7 @@ x_train, x_test = x_train / 255.0, x_test / 255.0
 
 model = tf.keras.models.Sequential([
     tf.keras.layers.Flatten(input_shape=(28, 28)),
-    
     tf.keras.layers.Dense(128, activation='relu'),
-    
-    # Dropout layer:
-    # Randomly sets 20% of the input units to 0 at each update during training to reduce the risk of overfitting.
     tf.keras.layers.Dropout(0.2),
     
     # Output layer:
