@@ -4,18 +4,9 @@ import tensorflow as tf
 x_train, x_test = x_train / 255.0, x_test / 255.0
 
 model = tf.keras.models.Sequential([
-    # The Flatten layer converts the 2D 28x28 images into a 1D array of 784 pixels.
     tf.keras.layers.Flatten(input_shape=(28, 28)),
-    
-    # A Dense (fully-connected) layer with 128 neurons and ReLU activation for introducing non-linearity.
     tf.keras.layers.Dense(128, activation='relu'),
-    
-    # Dropout layer randomly sets 20% of its inputs to zero during training.
-    # This prevents overfitting by ensuring that the model does not rely too heavily on any particular set of features.
     tf.keras.layers.Dropout(0.2),
-    
-    # The final Dense layer with 10 neurons and softmax activation.
-    # Each neuron corresponds to one of the 10 digits (0-9), and softmax outputs a probability distribution.
     tf.keras.layers.Dense(10, activation='softmax')
 ])
 
