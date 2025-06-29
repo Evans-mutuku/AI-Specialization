@@ -14,8 +14,6 @@ model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# Train (fit) the model on the training data over 5 epochs.
-# An epoch means one full pass through the entire training dataset.
 model.fit(x_train, y_train, epochs=5)
 
 # Evaluate the model on the test set.
