@@ -1,16 +1,8 @@
-# Import TensorFlow. TensorFlow provides the deep learning framework and Keras API for building models.
 import tensorflow as tf
 
-# Load the MNIST dataset directly from TensorFlow's built-in datasets.
-# The dataset is automatically downloaded from an online source and split into training and test sets.
-# x_train and x_test contain image pixel data, while y_train and y_test contain the corresponding digit labels.
 (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
-
-# Normalize the pixel values of the images from the original range of 0 to 255 to a range of 0 to 1.
-# This scaling helps the neural network train faster and more reliably.
 x_train, x_test = x_train / 255.0, x_test / 255.0
 
-# Build a Sequential model, which is a linear stack of layers.
 model = tf.keras.models.Sequential([
     # The Flatten layer converts the 2D 28x28 images into a 1D array of 784 pixels.
     tf.keras.layers.Flatten(input_shape=(28, 28)),
