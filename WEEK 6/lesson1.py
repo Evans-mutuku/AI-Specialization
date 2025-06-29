@@ -9,7 +9,6 @@ model = tf.keras.applications.MobileNetV2(weights='imagenet')
 image = np.random.rand(224, 224, 3)  # Random image for demonstration
 image = tf.keras.applications.mobilenet_v2.preprocess_input(image[np.newaxis, ...])
 
-# Perform inference on the edge device
 predictions = model.predict(image)
 decoded_predictions = tf.keras.applications.mobilenet_v2.decode_predictions(predictions, top=3)
 print("Predictions:", decoded_predictions)
