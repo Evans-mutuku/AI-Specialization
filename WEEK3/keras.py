@@ -8,17 +8,9 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Flatten(input_shape=(28, 28)),
     tf.keras.layers.Dense(128, activation='relu'),
     tf.keras.layers.Dropout(0.2),
-    
-    # Output layer:
-    # A Dense layer with 10 neurons—one for each digit (0-9)—and a softmax activation,
-    # which converts the outputs into probabilities that sum to 1.
     tf.keras.layers.Dense(10, activation='softmax')
 ])
 
-# Compile the model.
-# - optimizer: The Adam optimizer adapts the learning rate during training.
-# - loss: 'sparse_categorical_crossentropy' is appropriate for multi-class classification (when labels are provided as integers).
-# - metrics: We track 'accuracy' during training and testing.
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
