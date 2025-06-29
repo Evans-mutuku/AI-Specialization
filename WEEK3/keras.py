@@ -15,10 +15,5 @@ model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# Train the model using the training data.
-# The model will go through the data for 5 epochs (complete passes through the training data).
 model.fit(x_train, y_train, epochs=5)
-
-# Evaluate the model performance on the test data.
-# This step computes the model's loss and accuracy on the unseen test dataset.
 model.evaluate(x_test, y_test)
