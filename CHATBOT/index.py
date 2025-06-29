@@ -16,7 +16,6 @@ class RuleBasedChatbot:
                 return self.rules[pattern]
         return "I'm not sure how to respond to that. Try saying 'help'."
 
-# Example usage:
 chatbot = RuleBasedChatbot()
 while True:
     user_input = input("You: ")

@@ -1,13 +1,7 @@
-# Import TensorFlow, which includes the Keras API.
 import tensorflow as tf
 
-# Load the MNIST dataset provided by Keras.
-# This function downloads the dataset (if not already present locally) and splits it
-# into training and testing sets. The images are stored in x_train and x_test, and their corresponding labels are stored in y_train and y_test.
 (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
 
-# Normalize the image data.
-# The pixel values in the MNIST images range from 0 to 255. Dividing by 255.0 scales these values to the range 0 to 1.
 x_train, x_test = x_train / 255.0, x_test / 255.0
 
 # Build the neural network model using the Sequential API.
