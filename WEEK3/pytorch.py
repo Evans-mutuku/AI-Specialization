@@ -1,24 +1,15 @@
-# Import necessary PyTorch libraries and modules.
-import torch                              # Main PyTorch package.
-import torch.nn as nn                     # Provides neural network building blocks.
-import torch.optim as optim               # Provides optimization algorithms.
-import torch.nn.functional as F           # Contains useful functions like activation functions.
-from torchvision import datasets, transforms  # For loading and transforming datasets.
-from torch.utils.data import DataLoader   # Helps in batching and shuffling the data.
+import torch                              
+import torch.nn as nn                    
+import torch.optim as optim             
+import torch.nn.functional as F          
+from torchvision import datasets, transforms  
+from torch.utils.data import DataLoader   
 
-# Define the data transformation.
-# - transforms.ToTensor(): Converts a PIL Image or numpy array (pixel values 0-255) into a FloatTensor (values between 0.0 and 1.0).
-# - transforms.Normalize((0.1307,), (0.3081,)): Normalizes the tensor with given mean and standard deviation, computed on MNIST.
 transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.1307,), (0.3081,))
 ])
 
-# Download and load the training and test datasets.
-# - root='./data': Directory where the datasets will be stored.
-# - train=True/False: Specifies if we're downloading the training or test set.
-# - download=True: Downloads the dataset if it's not already present locally.
-# - transform: Applies the transformation defined above to the data.
 train_dataset = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
 test_dataset = datasets.MNIST(root='./data', train=False, download=True, transform=transform)
 
