@@ -2,7 +2,6 @@
 import tensorflow as tf
 import numpy as np
 
-# Load a pre-trained lightweight model (e.g., MobileNet)
 model = tf.keras.applications.MobileNetV2(weights='imagenet')
 
 image = np.random.rand(224, 224, 3)
