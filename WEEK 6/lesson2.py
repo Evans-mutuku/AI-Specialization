@@ -1,4 +1,3 @@
-# Example: AI-powered IoT device for temperature control
 import random
 
 class SmartThermostat:
