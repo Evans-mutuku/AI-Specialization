@@ -53,6 +53,6 @@ for epoch in range(5):
             pred = output.argmax(dim=1, keepdim=True) 
             correct += pred.eq(target.view_as(pred)).sum().item() 
 
-    test_loss /= len(test_loader.dataset)  # Compute average loss.
-    accuracy = 100. * correct / len(test_loader.dataset)  # Calculate accuracy in percentage.
+    test_loss /= len(test_loader.dataset) 
+    accuracy = 100. * correct / len(test_loader.dataset)
     print(f"\nTest set: Average loss: {test_loss:.4f}, Accuracy: {correct}/{len(test_loader.dataset)} ({accuracy:.2f}%)\n")
