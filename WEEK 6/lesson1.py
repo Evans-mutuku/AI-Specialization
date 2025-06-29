@@ -6,7 +6,7 @@ import numpy as np
 model = tf.keras.applications.MobileNetV2(weights='imagenet')
 
 # Simulate input data (e.g., image from a camera)
-image = np.random.rand(224, 224, 3)  # Random image for demonstration
+image = np.random.rand(224, 224, 3)
 image = tf.keras.applications.mobilenet_v2.preprocess_input(image[np.newaxis, ...])
 
 predictions = model.predict(image)
