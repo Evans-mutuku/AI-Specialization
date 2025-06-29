@@ -3,8 +3,8 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 
 # Simulate medical image data (e.g., pixel values)
-X = np.random.rand(100, 256)  # 100 images, 256 features each
-y = np.random.randint(0, 2, 100)  # Binary labels (0: healthy, 1: tumor)
+X = np.random.rand(100, 256)
+y = np.random.randint(0, 2, 100)
 
 # Train a simple AI model
 model = RandomForestClassifier()
