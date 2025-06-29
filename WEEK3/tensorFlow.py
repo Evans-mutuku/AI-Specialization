@@ -15,7 +15,4 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 
 model.fit(x_train, y_train, epochs=5)
-
-# Evaluate the model on the test set.
-# This provides an unbiased evaluation of how well the model generalizes to new, unseen data.
 model.evaluate(x_test, y_test)
