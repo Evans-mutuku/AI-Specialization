@@ -10,10 +10,6 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(10, activation='softmax')
 ])
 
-# Compile the model.
-# - optimizer='adam': Adam optimizer adjusts the learning rate during training.
-# - loss='sparse_categorical_crossentropy': This loss function is used for integer-labeled classification.
-# - metrics=['accuracy']: The model will report accuracy during training and testing.
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
