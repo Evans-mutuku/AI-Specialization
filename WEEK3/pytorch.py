@@ -31,20 +31,18 @@ model = SimpleNN()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 criterion = nn.CrossEntropyLoss()
 
-for epoch in range(5):  # Train for 5 epochs.
-    model.train()  # Set the model to training mode.
+for epoch in range(5): 
+    model.train() 
     for batch_idx, (data, target) in enumerate(train_loader):
-        optimizer.zero_grad()          # Clear gradients from the previous iteration.
-        output = model(data)           # Forward pass: compute the model output for the current batch.
-        loss = criterion(output, target)  # Compute the loss between prediction and true labels.
-        loss.backward()                # Backward pass: compute the gradients.
-        optimizer.step()               # Update model parameters using the gradients.
+        optimizer.zero_grad()   
+        output = model(data)       
+        loss = criterion(output, target) 
+        loss.backward()              
+        optimizer.step()       
 
-        # Print current training progress every 100 batches.
         if batch_idx % 100 == 0:
             print(f"Train Epoch: {epoch} [{batch_idx * len(data)}/{len(train_loader.dataset)}] Loss: {loss.item()}")
 
-    # Evaluation loop to assess model performance on the test dataset.
     model.eval()   # Set the model to evaluation (inference) mode.
     test_loss = 0
     correct = 0
