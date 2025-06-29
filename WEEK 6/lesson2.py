@@ -3,7 +3,7 @@ import random
 
 class SmartThermostat:
     def __init__(self):
-        self.preferred_temperature = 22  # Default preferred temperature
+        self.preferred_temperature = 22
 
     def learn_preferences(self, user_behavior):
         self.preferred_temperature = sum(user_behavior) / len(user_behavior)
