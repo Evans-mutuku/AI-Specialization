@@ -1,4 +1,3 @@
-# Example: AI-powered heart rate monitoring
 import random
 
 class HeartRateMonitor:
