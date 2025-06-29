@@ -28,14 +28,9 @@ class SimpleNN(nn.Module):
         return x
 
 model = SimpleNN()
-
-# Define the optimizer and the loss function.
-# - Adam is a popular optimizer that adapts the learning rate.
-# - CrossEntropyLoss combines softmax and negative log likelihood loss, appropriate for multi-class classification.
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 criterion = nn.CrossEntropyLoss()
 
-# Training loop: iterate over the dataset multiple times (epochs).
 for epoch in range(5):  # Train for 5 epochs.
     model.train()  # Set the model to training mode.
     for batch_idx, (data, target) in enumerate(train_loader):
