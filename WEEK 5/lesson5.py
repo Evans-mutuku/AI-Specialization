@@ -1,7 +1,5 @@
-# Import necessary libraries
 from sklearn.metrics import classification_report, confusion_matrix
 
-# Make predictions on the test set
 y_pred = model.predict(X_test)
 
 print("Confusion Matrix:")
