@@ -1,8 +1,6 @@
-# Example: AI for medical image analysis (simplified)
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 
-# Simulate medical image data (e.g., pixel values)
 X = np.random.rand(100, 256)
 y = np.random.randint(0, 2, 100)
 
