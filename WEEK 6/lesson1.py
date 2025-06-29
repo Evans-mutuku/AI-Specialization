@@ -1,4 +1,3 @@
-# Example: Deploying a lightweight AI model on an edge device (e.g., Raspberry Pi)
 import tensorflow as tf
 import numpy as np
 
