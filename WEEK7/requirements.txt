@@ -1,0 +1,5 @@
+# Requirements for AI Chatbot
+
+# For Streamlit version
+streamlit==1.28.0
+openai==0.28.0
